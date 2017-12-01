@@ -9,13 +9,13 @@ func main() {
 	fmt.Println(card1)
 	card2 := newCard()
 	fmt.Println(card2)
-	card3 := []string{newCard(), "Aces"}
+	card3 := deck{newCard(), "Aces"}
 	fmt.Println(card3)
 	card3 = append(card3, "Jokers")
+	card3.print()
 
-	for i, c := range card3 {
-		fmt.Println(i, c)
-	}
+	card4 := newDeck()
+	fmt.Println(card4)
 
 }
 
